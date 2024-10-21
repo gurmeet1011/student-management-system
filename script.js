@@ -166,7 +166,7 @@ const students=[{"id":1,"first_name":"Chadwick","last_name":"Ayre","email":"cayr
         displayStudents(filteredStudents);
     }
 function sortByFullNameAsc() {
-    const sortedStudents = students.slice().sort((a, b) => {
+    const sortedStudents = students.slice().sort((a, b) => {    //The students array is copied using the slice() method. This ensures that the original students array is not modified by the sorting operation. The slice() method without any arguments creates a shallow copy of the array
         const nameA = `${a.first_name} ${a.last_name}`.toLowerCase();
         const nameB = `${b.first_name} ${b.last_name}`.toLowerCase();
         return nameA.localeCompare(nameB);
